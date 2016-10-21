@@ -28,8 +28,10 @@
             <h3>Register as user</h3>
             <form method="POST"  action="Register">
                 <ul>
+                    <li>First Name <input tyoe='text' name="firstname"></li>
                     <li>User Name <input type="text" name="username"></li>
                     <li>Password <input type="password" name="password"></li>
+                    <li>Email Address <input type="text" name="email"></li>
                 </ul>
                 <br/>
                 <input type="submit" value="Register"> 
