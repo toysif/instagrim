@@ -10,13 +10,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Instagrim</title>
+    <title>Instagrim</title>
         <link rel="stylesheet" type="text/css" href="Styles.css" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
     <body>
         <header>
-            <h1>InstaGrim ! </h1>
+            <center> <h1>InstaGrim ! </h1> </center>
             <h2>Your world in Black and White</h2>
         </header>
         
@@ -34,11 +34,13 @@
                     %>
                 <li><a href="profile.jsp">Profile</a></li>
                 <li><a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a></li>
+                <li><a href="login.jsp">Logout</a></li> 
                     <%}
                             }else{
                             
                                 %>
-                 <li><a href="register.jsp">Register</a></li>
+                
+                <li><a href="register.jsp">Register</a></li>
                 <li><a href="login.jsp">Login</a></li>
                 
                 <%
