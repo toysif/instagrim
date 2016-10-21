@@ -17,7 +17,7 @@
     <body>
         <header>
             <center> <h1>InstaGrim ! </h1> </center>
-            <h2>Your world in Black and White</h2>
+            <center> <h2>Your world in Black and White</h2> </center>
         </header>
         
         <nav>
@@ -34,7 +34,7 @@
                     %>
                 <li><a href="profile.jsp">Profile</a></li>
                 <li><a href="/Instagrim/Images/<%=lg.getUsername()%>">Your Images</a></li>
-                <li><a href="login.jsp">Logout</a></li> 
+                <li><a href="logout.jsp">Logout</a></li> 
                     <%}
                             }else{
                             
@@ -55,7 +55,7 @@
             
             <ul>
                 <li class="footer"><a href="/Instagrim">Home</a></li>
-                <li></li>
+                
             </ul>
         </footer>
     </body>
