@@ -48,6 +48,33 @@ public class User {
         return true;
     }
     
+    public String[] returnUDetails(String username){
+        
+        String[] UDetails = new String[3];
+        
+        Session session = cluster.connect("instagrim");
+        PreparedStatement ps = session.prepare("SELECT username from userprofiles where login = ?");
+        
+        ResultSet rs = null;
+        BoundStatement boundStamenent = new BoundStatement (ps);
+        rs = session.execute(boundStamenent.bind ( username));
+                    if (rs.isExhausted()){
+                        System.out.println("No Details");
+                    } else { for (Row row : rs) {
+                        UDetails[0] = row.getString(0);
+                        UDetails[1] = row.getString(1);
+                        UDetails[2] = row.getString(2);
+                        System.out.println(UDetails[0] + UDetails[1] + UDetails[2]);
+                    }
+                    }
+                    
+        
+                   
+        return UDetails;
+        
+        
+    }
+    
     public boolean IsValidUser(String username, String Password){
         AeSimpleSHA1 sha1handler=  new AeSimpleSHA1();
         String EncodedPassword=null;
