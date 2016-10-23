@@ -37,7 +37,7 @@ public class User {
             return false;
         }
         Session session = cluster.connect("instagrim");
-        PreparedStatement ps = session.prepare("insert into userprofiles (login,password,first_name) Values(?,?,?)");
+        PreparedStatement ps = session.prepare("insert into userprofiles (login,password,first_name) Values(?,?)");
        
         BoundStatement boundStatement = new BoundStatement(ps);
         session.execute( // this is where the query is executed
@@ -47,7 +47,7 @@ public class User {
         
         return true;
     }
-    
+    /*
     public String[] returnUDetails(String username){
         
         String[] UDetails = new String[3];
@@ -74,7 +74,7 @@ public class User {
         
         
     }
-    
+    */
     public boolean IsValidUser(String username, String Password){
         AeSimpleSHA1 sha1handler=  new AeSimpleSHA1();
         String EncodedPassword=null;
@@ -110,5 +110,9 @@ public class User {
         this.cluster = cluster;
     }
 
+    //public void RegisterUser(String username, String password) {
+        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     
-}
+
